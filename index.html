@@ -69,6 +69,79 @@
 
         @media screen and (min-width: 770px) and (max-width: 835px) {
             /* Max */
+            @keyframes colors {
+                0% {
+                    background-color: rgb(10, 0, 68);
+                }
+
+                30% {
+                    background-color: rgba(0, 34, 155, 0.589);
+                }
+
+                100% {
+                    background-color: rgb(0, 123, 255);
+                }
+            }
+
+            
+
+            body {
+                margin: 5%;
+                padding-top: 20%;
+                align-items: center;
+                background-color: rgb(0, 0, 0);
+                animation-name: colors;
+                animation-duration: 3.5s;
+                animation-timing-function: linear;
+                animation-delay: 0.5s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate-reverse;
+                animation-play-state: running;
+            }
+
+            .circle {
+                display: block;
+                background: black;
+                border-radius: 90%;
+                height: 300px;
+                width: 300px;
+                margin: 0;
+                background: radial-gradient(circle at 100px 100px, #5cabff, #000);
+            }
+
+            [id^=div] {
+                display: none;
+            }
+
+            #div1 {
+                display: block;
+                position: flex;
+                top: 50%;
+                left: 50%;
+                width: 10vw;
+                height: 10vw;
+                padding: 20%;
+                background-color: transparent;
+                border-radius: 50%;
+                border: groove 70px rgb(235, 51, 255);
+                animation: move 2s linear infinite alternate;
+                transition-property: border;
+                transition-duration: 800ms;
+                transition-delay: 100ms;
+            }
+
+            @keyframes bounce {
+                0% {
+                    transform: translateY(0); 
+                }
+                50% {
+                    transform: translateY(200px); 
+                }
+                100% {
+                    transform: translateY(0); 
+                }
+            }  
+
         }
 
         @media screen and (min-width: 705px) and (max-width: 770px) {
