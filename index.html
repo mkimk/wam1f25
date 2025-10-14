@@ -32,7 +32,48 @@
         @media screen and (min-width: 835px) and (max-width: 900px) { /* Maria */ }
         @media screen and (min-width: 770px) and (max-width: 835px) { /* Max */ }
         @media screen and (min-width: 705px) and (max-width: 770px) { /* Roye */ }
-        @media screen and (min-width: 640px) and (max-width: 705px) { /* Emma */ }
+        @media screen and (min-width: 640px) and (max-width: 705px) { /* Emma */ 
+              body {
+                background-color: #FFF;
+            }
+
+            [id^=div] {
+                display: none;
+            }
+
+            #div1 {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 10vw;
+                height: 10vw;
+                padding: 20%;
+                background-color: #ff0606;
+                border-radius: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                animation: animationColors 5s ease-in-out 3s, ease-in 3s;
+                animation-iteration-count: infinite;
+            }
+                @keyframes animationColors {
+                    0% {
+                        background-color: red;
+                    }
+                    25% {
+                        background-color: yellow;
+                    }
+                    50% {
+                        background-color: green;
+                    }
+                    75% {
+                        background-color: blue;
+                    }
+                    100% {
+                        background-color: red;
+                    }
+
+            }
+        }
         @media screen and (min-width: 320px) and (max-width: 640px) { /* Minkyoung */
             body {
                 background-color: #FFF;
