@@ -1,6 +1,4 @@
-# wam1f25
-
-# Media Query Relay 2025
+# Web as Medium 1, Fall 2025: Media Query Relay 
 
 Media Query Relay by 15 students in Web as Medium 1, Fall 2025:<br>
 
