@@ -65,7 +65,34 @@
 
         @media screen and (min-width: 835px) and (max-width: 900px) {
             /* Maria */
-        }
+        body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #eeebad;
+    }
+
+    [id^=div] {
+                display: none;
+            }
+            
+        #div1 {
+        display: block;
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%; 
+        animation: colorAndSize 5s infinite alternate;
+    }
+
+    @keyframes colorAndSize {
+        0% { background-color: rgb(255, 0, 0); transform: scale(0.1); }
+        50% { background-color: rgb(204, 0, 255); transform: scale(2); }
+        100% { background-color: rgb(21, 0, 255); transform:  scale(1); }
+    }
+ }
 
         @media screen and (min-width: 770px) and (max-width: 835px) {
             /* Max */
