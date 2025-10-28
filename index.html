@@ -7,7 +7,7 @@
                     | |
                     |_|
     Media Query Relay by 15 students in Web as Medium 1, Fall 2025.
-    Students: Emma Schneider, Roye Zhang, Max Gavalchin, Maria Garcia Velasco, Barbara Cutlak Soares, Bonnie Chen, James Farrington, Kiry Kim, Alex Hogue, Candice Lee, Punch Kulphisanrat, Anna Wang, Josh Joseph, Cathy Chen, and Hamin Seo.    
+    Students: Emma Schneider, Roye Zhang, Max Gavalchin, Maria Garcia Velasco, Barbara Cutlak, Bonnie Chen, James Farrington, Kiry Kim, Alex Hogue, Candice Lee, Punch Kulphisanrat, Anna Wang, Josh Joseph, Cathy Chen, and Hamin Seo.    
     Instructor: Minkyoung Kim; TA: Maggie Xian; Class website: https://mkim.netlify.app/wam1f25/
 -->
 <html>
@@ -61,7 +61,51 @@
 
         @media screen and (min-width: 900px) and (max-width: 965px) {
             /* Barbara */
+        body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(204, 0, 255);
         }
+
+        [id^=div] {
+                display: none;
+            }
+
+            #div1 {
+                display: block;
+                position: flex;
+                top: 50%;
+                left: 50%;
+                width: 50px;
+                height: 50px;
+                padding: 30%;
+                background-color: transparent;
+                border-radius: 100%;
+                animation: move 2s linear infinite alternate;
+                transition-property: border;
+                transition-duration: 800ms;
+                transition-delay: 100ms;
+                animation: glow 2s infinite alternate;
+            }
+
+            #div2 {
+                width: 500px;
+                height: 500px;
+                border-radius: 100px;
+                background-color: #ccc;
+                animation: glow 0.1s infinite alternate;
+                }
+
+                @keyframes glow {
+                from {
+                    box-shadow: 0 0 100px -100px #aef4af;
+                }
+                to {
+                    box-shadow: 0 0 100px 100px #aef4af;
+                }
+                }
+                }
 
         @media screen and (min-width: 835px) and (max-width: 900px) {
             /* Maria */
