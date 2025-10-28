@@ -57,50 +57,50 @@
 
         @media screen and (min-width: 965px) and (max-width: 1030px) {
             /* Bonnie */
-        @media (max-width: 965px) {
+        [id^=div] {
+            display: none;
+        }
 
-        @media screen and (min-width: 965px) and (max-width: 1030px) {
-            /* Bonnie */
-			@media screen and (min-width: 980px) and (max-width: 1030px) {
-                    <div id="bluescreen">
-                    <img src="bluescreen.png" alt="bluescreen" style="cursor:pointer;">
-                    </div>
-                    img {
-                        position: relative;
-                        top: 2%;
-                        left: 2%;
-                        width: 30vw;
-                        height: auto;
-                    }
-	
-				}
-			}            
-			@media (min-width: 965px) and (max-width: 990px) {
-				body {
-					background-color: #aef4af;
-					transition: all 0.75s linear;
-				}
-			}
-			@media (min-width: 990px) and (max-width: 1000px) {
-				body {
-					background-color: #aef4ee;
-					transition: all 0.75s linear;
-				}
-			}
-			@media (min-width: 1000px) and (max-width: 1010px) {
-				body {
-					background-color: rgb(47, 140, 255);
-					transition: all 0.75s linear;
-				}
-			}
-			@media (min-width: 1010px) and (max-width: 1020px) {
-				body {
-					background-color: #0000ff;
-					transition: all 0.75s linear;
-				}
-			}
-			@media (min-width: 1020px) and (max-width: 1030px) {
-				body {
+        #div3 {
+            display: block;
+            position: absolute;
+            top: 2%;
+            left: 2%;
+            width: 30vw;
+            height: 30vw;
+            background: url('bluescreen.png') center/contain no-repeat;
+            cursor: pointer;
+        }
+
+        @media screen and (min-width: 965px) and (max-width: 990px) {
+            body {
+                background-color: #aef4af;
+            }
+        }
+
+        @media screen and (min-width: 990px) and (max-width: 1000px) {
+            body {
+                background-color: #5edcd1;
+                transition: all 0.75s linear;
+            }
+        }
+
+        @media screen and (min-width: 1000px) and (max-width: 1010px) {
+            body {
+                background-color: rgb(47, 78, 255);
+                transition: all 0.5s linear;
+            }
+        }
+
+        @media screen and (min-width: 1010px) and (max-width: 1020px) {
+            body {
+                background-color: #0000ff;
+                transition: all 0.5s linear;
+            }
+        }
+
+        @media screen and (min-width: 1020px) and (max-width: 1030px) {
+            body {
             #div1 {
                 position: absolute;
                 top: 50%;
@@ -109,8 +109,9 @@
                 height: 10vw;
                 padding: 20%;
                 border-radius: 50%;
-					background-color: #000;
-					transition: all 0.75s linear;
+				background-color: #383838;
+				transition: all 0.75s linear;
+                transform: translateX(+50%) translateY(+70%);
 				}
 			}
         }
