@@ -55,70 +55,77 @@
             /* James*/
         }
 
-        @media screen and (min-width: 965px) and (max-width: 1030px) 
-            /* Bonnie */
-        [id^=div] {
-            display: none;
-        }
-
-        #div3 {
-            display: block;
-            position: absolute;
-            top: 2%;
-            left: 2%;
-            width: 30vw;
-            height: 30vw;
-            background: url('bluescreen.png') center/contain no-repeat;
-            cursor: pointer;
-        }
-    }
-
-        @media screen and (min-width: 965px) and (max-width: 990px) {
-            body {
-                background-color: #aef4af;
+        
+         @media screen and (min-width: 1020px) and (max-width: 1030px) { /* Bonnie */
+           
+             #div3 {
+                display: block;
+                position: absolute;
+                top: 2%;
+                left: 2%;
+                width: 30vw;
+                height: 30vw;
+                background: url('bluescreen.png') center/contain no-repeat;
+                cursor: pointer;
             }
-        }
-
-        @media screen and (min-width: 990px) and (max-width: 1000px) {
-            body {
-                background-color: #5edcd1;
-                transition: all 0.75s linear;
-            }
-        }
-
-        @media screen and (min-width: 1000px) and (max-width: 1010px) {
-            body {
-                background-color: rgb(47, 78, 255);
-                transition: all 0.5s linear;
-            }
-        }
-
-        @media screen and (min-width: 1010px) and (max-width: 1020px) {
-            body {
-                background-color: #0000ff;
-                transition: all 0.5s linear;
-                #div3 {
-                    transform: scale(400%);
-                    transition: all 0.5s linear;
-                }
-            }
-        }
-
-        @media screen and (min-width: 1020px) and (max-width: 1030px) {
-            body {
-			}
-                        #div1 {
+          
+            
+            #div1 {
+                display: block;
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 width: 10vw;
                 height: 10vw;
                 padding: 20%;
+                background-color: #000;
                 border-radius: 50%;
-				background-color: #383838;
-				transition: all 0.75s linear;
-                transform: translateX(+50%) translateY(+70%);
-				}
+                transform: translateX(-50%) translateY(-50%);
+            }
+        }
+
+        @media screen and (min-width: 1010px) and (max-width: 1020px) { /* Bonnie */
+            body {
+                background-color: #0000ff;
+                transition: all 0.5s linear;
+               
+            }
+            #div3 {
+                transform: scale(400%);
+                transition: all 0.5s linear;
+            }
+               #div1 {
+               display: none;
+            }
+        }
+
+        @media screen and (min-width: 1000px) and (max-width: 1010px) { /* Bonnie */
+            body {
+                background-color: rgb(47, 78, 255);
+                transition: all 0.5s linear;
+            }
+               #div1 {
+               display: none;
+            }
+        }
+        
+        @media screen and (min-width: 990px) and (max-width: 1000px) { /* Bonnie */
+            body {
+                background-color: #5edcd1;
+                transition: all 0.75s linear;
+            }
+               #div1 {
+               display: none;
+            }
+        }
+
+        @media screen and (min-width: 965px) and (max-width: 990px) { /* Bonnie */
+            body {
+                background-color: #aef4af;
+            }
+               #div1 {
+               display: none;
+            }
         }
 
 
