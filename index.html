@@ -45,6 +45,118 @@
 
         @media screen and (min-width: 1160px) and (max-width: 1225px) {
             /* Alex */
+            /* * { transition: all .35s ease; } */
+
+            #div1 {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                padding: 20%;
+                background-color: #000;
+                border-radius: 50%;
+                z-index: -10;
+                transform: translateX(-50%) translateY(-50%);
+                animation: fillBackground .5s ease-in forwards;
+            }
+
+            #div6 {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: min(56vmin, 560px);
+                height: min(56vmin, 560px);
+                transform: translate(-50%, -50%);
+                background: transparent;                
+                border: min(1.2vmin, 12px) solid #0aa18b;
+                border-radius: 50%;                  
+                box-shadow: 0 0 0 0 rgba(10,161,139,.25), inset 0 0 30px rgba(10,161,139,.15);             
+                animation: ringsMove 0.8s ease-in-out infinite alternate-reverse;  
+            }
+
+            #div2 {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: min(52vmin, 520px);
+                height: min(52vmin, 520px);
+                transform: translate(-50%, -50%);
+                background: transparent;                
+                border: min(1.2vmin, 12px) solid #1700ac;
+                border-radius: 50%;                  
+                box-shadow: 0 0 0 0 rgba(10,161,139,.25), inset 0 0 30px rgba(10,161,139,.15);  
+                animation: ringsMove 1.2s ease-in-out infinite alternate-reverse;        
+            }
+
+            #div3 {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: min(48vmin, 480px);
+                height: min(48vmin, 480px);
+                transform: translate(-50%, -50%);
+                background: transparent;                
+                border: min(1.2vmin, 12px) solid #670aa1;
+                border-radius: 50%;                  
+                box-shadow: 0 0 0 0 rgba(10,161,139,.25), inset 0 0 30px rgba(10,161,139,.15); 
+                animation: ringsMove 1.8s ease-in-out infinite alternate-reverse;               
+            }
+
+            #div4 {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: min(44vmin, 440px);
+                height: min(44vmin, 440px);
+                transform: translate(-50%, -50%);
+                background: transparent;                
+                border: min(1.2vmin, 12px) solid #a10a6a;
+                border-radius: 50%;                  
+                box-shadow: 0 0 0 0 rgba(10,161,139,.25), inset 0 0 30px rgba(10,161,139,.15);
+                animation: ringsMove 2.4s ease-in-out infinite alternate-reverse;               
+            }
+
+            #div5 {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: min(40vmin, 400px);
+                height: min(40vmin, 400px);
+                transform: translate(-50%, -50%);
+                background: transparent;                
+                border: min(1.2vmin, 12px) solid #51bc0a;
+                border-radius: 50%;                  
+                box-shadow: 0 0 0 0 rgba(10,161,139,.25), inset 0 0 30px rgba(10,161,139,.15);
+                animation: ringsMove 3s ease-in-out infinite alternate-reverse;               
+            }
+
+            @keyframes ringsMove {
+                0% { 
+                    width: min(5vmin, 50px);
+                    height: min(5vmin, 50px); 
+                    background: rgba(255, 255, 255, 0.488); 
+                }
+                100%   { 
+                    width: min(70vmin, 700px);
+                    height: min(70vmin, 700px); 
+                    border-width: min(2.4vmin, 24px);
+                }
+            }
+
+            @keyframes fillBackground {
+                    0% {
+                        transform: translateX(-50%) translateY(-50%) scale(1);
+                    }
+
+                    100% {
+                        transform: translateX(-50%) translateY(-50%) scale(4);
+                    }
+                }
         }
 
         @media screen and (min-width: 1095px) and (max-width: 1160px) {
@@ -169,9 +281,9 @@
             @media (prefers-reduced-motion: reduce) {
                 #div1, #div6, #div8, #div9 { animation: none !important; }
             }
-}
-
         }
+
+        
 
         @media screen and (min-width: 1030px) and (max-width: 1095px) {
             /* James*/
