@@ -41,7 +41,161 @@
 
         @media screen and (min-width: 1225px) and (max-width: 1290px) {
             /* Candice */
+            body {
+                background-color: #000;
+            }
+
+            #div1 {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: min(56vmin, 560px);
+                height: min(56vmin, 560px); 
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                background: transparent;
+                border: 8px solid #0aa18b;
+                box-shadow: inset 10px 2px 5px #01584b;
+                animation: spinRight 3s ease-in-out infinite;
+            }
+            #div2 {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: min(56vmin, 560px);
+                height: min(56vmin, 560px);     
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                background: transparent;
+                border: 8px solid #1700ac;
+                box-shadow: inset -1px 10px 20px #090045;
+                animation: spinLeft 5.7s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+            }
+            #div3 {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: min(56vmin, 560px);
+                height: min(56vmin, 560px);   
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                background: transparent;
+                border: 8px solid #670aa1;
+                box-shadow: inset  -1px 10px 20px #44016d;
+                animation: spinRight 3.5s ease-in-out infinite;
+            }
+            #div4 {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: min(42vmin, 420px);
+                height: min(42vmin, 420px);   
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                background: transparent;
+                border: 8px solid #a10a6a;
+                box-shadow: inset 10px 2px 5px #550237;
+                animation: spinLeft 5s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+            }
+            #div5 {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: min(40vmin, 400px);
+                height: min(40vmin, 400px);     
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                background: transparent;
+                border: 8px solid #51bc0a;
+                box-shadow: inset 10px 2px 5px green;
+                animation: spinRight 1.3s ease-in-out infinite;
+            }
+            #div6 {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: min(30vmin, 300px);
+                height: min(30vmin, 300px);     
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                background: transparent;
+                border: 8px solid #689af8;
+                box-shadow: inset 10px 2px 5px rgb(3, 86, 186);
+                animation: spinRight 2s ease-in-out infinite;
+            }
+            #div7 {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: min(52vmin, 520px);
+                height: min(52vmin, 520px);   
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                background: transparent;
+                border: 8px solid #d5ed00;
+                box-shadow: inset 10px 2px 5px #89ae02;
+                animation: spinLeft 5.3s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+            }
+            #div8 {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: min(50vmin, 500px);
+                height: min(50vmin, 500px);   
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                background: transparent;
+                border: 8px solid #ff003c;
+                box-shadow: inset 10px 2px 5px #b12300;
+                animation: spinRight 4s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+            }
+        
+            @keyframes spinRight {
+                0% {
+                    transform: translate(-50%, -50%) rotate(0deg) skewX(0deg);
+                    filter: blur(10px);
+                }
+                50% {
+                    transform: translate(-50%, -50%) rotate(180deg) skewX(10deg)scale(1.3);
+                    border-color: white;
+                    opacity: 20%;
+                    filter: blur(4px);
+                }
+                100% {
+                    transform: translate(-50%, -50%) rotate(360deg) skewX(0deg);
+                    filter: blur(20px);
+                }
+            }
+
+            @keyframes spinLeft {
+                0% {
+                    transform: translate(-50%, -50%) rotate(0deg) skewX(0deg);
+                    filter: blur(10px);
+                }
+                50% {
+                    transform: translate(-50%, -50%) rotate(-180deg) skewX(-10deg) scale(2);
+                    border-color: white;
+                    filter: blur(4px);
+                    opacity: 20%;
+                }
+                100% {
+                    transform: translate(-50%, -50%) rotate(-360deg) skewX(0deg);
+                    filter: blur(20px);
+                }
+            }
+
         }
+
+       
+        
 
         @media screen and (min-width: 1160px) and (max-width: 1225px) {
             /* Alex */
