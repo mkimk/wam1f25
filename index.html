@@ -19,13 +19,96 @@
     <meta name="viewport" content="width=device-width" />
     <style>
       @media screen and (min-width: 1550px) {
-        /* Hamin */
-      }
-
-      @media screen and (min-width: 1485px) and (max-width: 1550px) {
         /* Cathy */
       }
 
+      @media screen and (min-width: 1485px) and (max-width: 1550px) {
+        /* Hamin */
+        body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 9998;
+        backdrop-filter: blur(60px);
+        background-color: rgba(0, 0, 0, 0); 
+        animation: blurFade 2s ease-in-out forwards;
+        }
+
+        #div21 {
+          position: fixed;
+          width: 20vmin;
+          height: 20vmin;
+          border-radius: 50%;
+          background-color: rgb(255, 255, 255);
+          background-image: radial-gradient(
+              at 74% 14%,
+              hsla(9, 100%, 63%, 1) 0px,
+              transparent 50%
+            ),
+            radial-gradient(
+              at 100% 62%,
+              hsla(32, 100%, 57%, 1) 0px,
+              transparent 50%
+            ),
+            radial-gradient(
+              at 29% 38%,
+              hsla(284, 100%, 74%, 1) 0px,
+              transparent 50%
+            ),
+            radial-gradient(
+              at 65% 70%,
+              hsla(232, 100%, 61%, 1) 0px,
+              transparent 50%
+            );
+          background-size: 300% 300%;
+
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%) scale(2.5); 
+
+          z-index: 10001;
+          pointer-events: none;
+
+          animation: showCircle 0.3s ease-in forwards 1s,
+                    gradient-animation 2s linear infinite,
+                    pumpGrow 2s ease-in-out infinite 0.3s; 
+                
+        }
+
+        @keyframes pumpGrow {
+          0% { transform: translate(-50%, -50%) scale(2.5); filter: blur(2px); background-color: #ff6c6c; }
+          25% { transform: translate(-50%, -50%) scale(2.6); filter: blur(10px); background-color:  #b7ff74; }
+          50% { transform: translate(-50%, -50%) scale(6.8); filter: blur(20px)}
+          75% { transform: translate(-50%, -50%) scale(2.6); filter: blur(6px) }
+          100% { transform: translate(-50%, -50%) scale(2.5); filter: blur(1px)}
+        }
+      }
+
+      @keyframes bodyPumpBackground {
+        0% {
+          background-color: rgb(255, 251, 221);
+        }
+        25% {
+          background-color: rgb(248, 255, 243);
+        }
+        50% {
+          background-color: rgb(255, 246, 228);
+        }
+        75% {
+          background-color: rgb(255, 255, 255);
+        }
+        100% {
+          background-color: rgb(214, 219, 255);
+        }
+      }
+
+      body {
+        animation: bodyPumpBackground 2s ease-in-out infinite;
+      }
+
+            
+  
       @media screen and (min-width: 1420px) and (max-width: 1485px) {
         /* Anna */
 
@@ -2160,5 +2243,7 @@
     <div id="ring1"></div>
     <div id="ring2"></div>
     <!-- anna end -->
+    <div id="div23"></div>
+
   </body>
 </html>
