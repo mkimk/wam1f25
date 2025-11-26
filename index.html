@@ -20,19 +20,119 @@
     <style>
       @media screen and (min-width: 1550px) {
         /* Cathy */
+        body {
+          margin: 0;
+          height: 100vh;
+          width: 100vw;
+          overflow: hidden;
+        }
+
+        #div23 {
+          position: relative;
+          width: 100vw;
+          height: 100vh;
+          background: #000000;
+        }
+
+        #div24 {
+          position: absolute;
+          bottom: 25vh;
+          left: 15vw;
+          width: 70vw;
+          height: 3vh;
+          background: #b6e3ff;
+          transform-origin: 50% 50%;
+          animation: seesaw-tilt 1.8s ease-in-out infinite alternate;
+        }
+
+        #div25 {
+          position: absolute;
+          bottom: 8vh;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 22vw;
+          height: 18vh;
+          background: #b6e3ff;
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+
+        #div26,
+        #div27,
+        #div28 {
+          position: absolute;
+          width: 30vh;
+          height: 30vh;
+          border-radius: 50%;
+          bottom: 21vh;
+        }
+
+        #div26 {
+          left: 8vw;
+          background: #ca68ff;
+          animation: ball-bounce-left 1.8s ease-in-out infinite alternate;
+        }
+
+        #div28 {
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: 27vh;
+          background: #ff6b16;
+          animation: ball-bounce-center 1.8s ease-in-out infinite alternate;
+        }
+
+        #div27 {
+          right: 8vw;
+          background: #4ae7f5;
+          animation: ball-bounce-right 1.8s ease-in-out infinite alternate;
+        }
+
+        @keyframes ball-bounce-center {
+          0% {
+            transform: translate(-50%, 0);
+          }
+          100% {
+            transform: translate(-50%, -25vh);
+          }
+        }
+        @keyframes seesaw-tilt {
+          0% {
+            transform: rotate(-14deg);
+          }
+          100% {
+            transform: rotate(14deg);
+          }
+        }
+
+        @keyframes ball-bounce-right {
+          0% {
+            transform: translateY(-25vh);
+          }
+          100% {
+            transform: translateY(8vh);
+          }
+        }
+
+        @keyframes ball-bounce-left {
+          0% {
+            transform: translateY(8vh);
+          }
+          100% {
+            transform: translateY(-25vh);
+          }
+        }
       }
 
       @media screen and (min-width: 1485px) and (max-width: 1550px) {
         /* Hamin */
         body::before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        pointer-events: none;
-        z-index: 9998;
-        backdrop-filter: blur(60px);
-        background-color: rgba(0, 0, 0, 0); 
-        animation: blurFade 2s ease-in-out forwards;
+          content: "";
+          position: fixed;
+          inset: 0;
+          pointer-events: none;
+          z-index: 9998;
+          backdrop-filter: blur(60px);
+          background-color: rgba(0, 0, 0, 0);
+          animation: blurFade 2s ease-in-out forwards;
         }
 
         #div21 {
@@ -65,23 +165,39 @@
 
           left: 50%;
           top: 50%;
-          transform: translate(-50%, -50%) scale(2.5); 
+          transform: translate(-50%, -50%) scale(2.5);
 
           z-index: 10001;
           pointer-events: none;
 
           animation: showCircle 0.3s ease-in forwards 1s,
-                    gradient-animation 2s linear infinite,
-                    pumpGrow 2s ease-in-out infinite 0.3s; 
-                
+            gradient-animation 2s linear infinite,
+            pumpGrow 2s ease-in-out infinite 0.3s;
         }
 
         @keyframes pumpGrow {
-          0% { transform: translate(-50%, -50%) scale(2.5); filter: blur(2px); background-color: #ff6c6c; }
-          25% { transform: translate(-50%, -50%) scale(2.6); filter: blur(10px); background-color:  #b7ff74; }
-          50% { transform: translate(-50%, -50%) scale(6.8); filter: blur(20px)}
-          75% { transform: translate(-50%, -50%) scale(2.6); filter: blur(6px) }
-          100% { transform: translate(-50%, -50%) scale(2.5); filter: blur(1px)}
+          0% {
+            transform: translate(-50%, -50%) scale(2.5);
+            filter: blur(2px);
+            background-color: #ff6c6c;
+          }
+          25% {
+            transform: translate(-50%, -50%) scale(2.6);
+            filter: blur(10px);
+            background-color: #b7ff74;
+          }
+          50% {
+            transform: translate(-50%, -50%) scale(6.8);
+            filter: blur(20px);
+          }
+          75% {
+            transform: translate(-50%, -50%) scale(2.6);
+            filter: blur(6px);
+          }
+          100% {
+            transform: translate(-50%, -50%) scale(2.5);
+            filter: blur(1px);
+          }
         }
       }
 
@@ -107,8 +223,6 @@
         animation: bodyPumpBackground 2s ease-in-out infinite;
       }
 
-            
-  
       @media screen and (min-width: 1420px) and (max-width: 1485px) {
         /* Anna */
 
@@ -2213,96 +2327,7 @@
           transform: translateX(-50%) translateY(-50%);
         }
       }
-          
-  /*Cathy*/
-  @media screen and (min-width: 1485px) and (max-width: 1550px) { body {
-  margin: 0;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;}
-
-  #div23 {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background: #000000;
-  }
-
-  #div24 {
-    position: absolute;
-    bottom: 25vh;
-    left: 15vw;
-    width: 70vw;
-    height: 3vh;
-    background: #b6e3ff;
-    transform-origin: 50% 50%;
-    animation: seesaw-tilt 1.8s ease-in-out infinite alternate;
-  }
-
-  #div25 {
-    position: absolute;
-    bottom: 8vh;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 22vw;
-    height: 18vh;
-    background: #b6e3ff;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  }
-      
-  #div26, #div27, #div28 {
-    position: absolute;
-    width: 30vh;
-    height: 30vh;
-    border-radius: 50%;
-    bottom: 21vh;
-  }
-
-  #div26 {
-    left: 8vw;
-    background: #ca68ff;
-    animation: ball-bounce-left 1.8s ease-in-out infinite alternate;
-  }
-
-  #div28 {
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 27vh;
-    background: #ff6b16;
-    animation: ball-bounce-center 1.8s ease-in-out infinite alternate;
-  }
-
-     #div27 {
-    right: 8vw;
-    background: #4ae7f5;
-    animation: ball-bounce-right 1.8s ease-in-out infinite alternate;
-  }
-
-      
-      
-        @keyframes ball-bounce-center {
-    0%   { transform: translate(-50%, 0); }
-    100% { transform: translate(-50%, -25vh); }
-  }
-        @keyframes seesaw-tilt {
-        0%   { transform: rotate(-14deg); }
-        100% { transform: rotate(14deg); }
-      }
-
-        @keyframes ball-bounce-right {
-        0%   { transform: translateY(-25vh); }
-        100% { transform: translateY(8vh); }
-      }
-
-         @keyframes ball-bounce-left {
-        0%   { transform: translateY(8vh); }
-        100% { transform: translateY(-25vh); }
-      }
-      
-    }
-    
     </style>
-
   </head>
 
   <body>
@@ -2333,13 +2358,12 @@
     <div id="ring2"></div>
     <!-- anna end -->
     <!-- cathy start-->
-     <div id="div23"></div>
-     <div id="div25"></div> 
-     <div id="div24"></div> 
-     <div id="div26"></div> 
-     <div id="div27"></div>
-     <div id="div28"></div>
+    <div id="div23"></div>
+    <div id="div25"></div>
+    <div id="div24"></div>
+    <div id="div26"></div>
+    <div id="div27"></div>
+    <div id="div28"></div>
     <!-- cathy end -->
-  </div>
   </body>
 </html>
