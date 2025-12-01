@@ -172,9 +172,9 @@
 
           opacity: 0;
 
-          animation: fadeIn 0.5s forwards 1s,
+          animation: fadeIn 0.5s forwards 1.5s,
             gradient-animation 2s linear infinite,
-            pumpGrow 2s ease-in-out infinite 1s;
+            pumpGrow 2s ease-in-out infinite 1.5s;
         }
 
         @keyframes pumpGrow {
@@ -221,7 +221,7 @@
         }
 
         body {
-          animation: bodyPumpBackground 2s ease-in-out infinite 1s;
+          animation: bodyPumpBackground 2s ease-in-out infinite 1.5s;
         }
 
         /* added by anna to transition from anna -> hamin */
@@ -257,7 +257,7 @@
           animation: showCircle 2s ease-in forwards 1s,
             gradientAnimation 2s linear infinite,
             upDown 1s ease-in-out infinite 3.8s,
-            fadeOut 0.5s ease-out forwards 0.5s;
+            fadeOut 1s ease-out forwards 0.5s;
         }
 
         #circle2 {
@@ -282,7 +282,7 @@
           animation: showCircle 2s ease-in forwards 1s,
             gradientAnimation 2s linear infinite,
             upDown 1s ease-in-out infinite 3.6s,
-            fadeOut 0.5s ease-out forwards 0.5s;
+            fadeOut 1s ease-out forwards 0.5s;
         }
 
         #circle3 {
@@ -310,7 +310,7 @@
           animation: showCircle 2s ease-in forwards 1s,
             gradientAnimation 2s linear infinite,
             upDown 1s ease-in-out infinite 3.4s,
-            fadeOut 0.5s ease-out forwards 0.5s;
+            fadeOut 1s ease-out forwards 0.5s;
         }
 
         #circle4 {
@@ -335,7 +335,7 @@
           animation: showCircle 2s ease-in forwards 1s,
             gradientAnimation 2s linear infinite,
             upDown 1s ease-in-out infinite 3.2s,
-            fadeOut 0.5s ease-out forwards 0.5s;
+            fadeOut 1s ease-out forwards 0.5s;
         }
 
         #circle5 {
@@ -358,16 +358,28 @@
           opacity: 0;
           animation: showCircle 2s ease-in forwards 1s,
             gradientAnimation 2s linear infinite,
-            upDown 1s ease-in-out infinite 3s,
-            fadeOut 0.5s ease-out forwards 0.5s;
+            upDown 1s ease-in-out infinite 3s, fadeOut 1s ease-out forwards 0.5s;
         }
 
         @keyframes fadeOut {
           0% {
+            width: 20vw;
+            height: 20vw;
+            transform: translate(var(--x), -50%) scale(1);
+            opacity: 1;
+          }
+
+          50% {
+            width: 20vw;
+            height: 20vw;
+            transform: translate(-50%, -50%) scale(1);
             opacity: 1;
           }
 
           100% {
+            width: 20vmin;
+            height: 20vmin;
+            transform: translate(-50%, -50%) scale(2.5);
             opacity: 0;
           }
         }
