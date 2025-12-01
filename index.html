@@ -170,9 +170,11 @@
           z-index: 10001;
           pointer-events: none;
 
-          animation: showCircle 0.3s ease-in forwards 1s,
+          opacity: 0;
+
+          animation: fadeIn 0.5s forwards 1s,
             gradient-animation 2s linear infinite,
-            pumpGrow 2s ease-in-out infinite 0.3s;
+            pumpGrow 2s ease-in-out infinite 1s;
         }
 
         @keyframes pumpGrow {
@@ -199,28 +201,247 @@
             filter: blur(1px);
           }
         }
-      }
 
-      @keyframes bodyPumpBackground {
-        0% {
-          background-color: rgb(255, 251, 221);
+        @keyframes bodyPumpBackground {
+          0% {
+            background-color: rgb(255, 251, 221);
+          }
+          25% {
+            background-color: rgb(248, 255, 243);
+          }
+          50% {
+            background-color: rgb(255, 246, 228);
+          }
+          75% {
+            background-color: rgb(255, 255, 255);
+          }
+          100% {
+            background-color: rgb(214, 219, 255);
+          }
         }
-        25% {
-          background-color: rgb(248, 255, 243);
-        }
-        50% {
-          background-color: rgb(255, 246, 228);
-        }
-        75% {
-          background-color: rgb(255, 255, 255);
-        }
-        100% {
-          background-color: rgb(214, 219, 255);
-        }
-      }
 
-      body {
-        animation: bodyPumpBackground 2s ease-in-out infinite;
+        body {
+          animation: bodyPumpBackground 2s ease-in-out infinite 1s;
+        }
+
+        /* added by anna to transition from anna -> hamin */
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+          }
+
+          100% {
+            opacity: 1;
+          }
+        }
+
+        #circle1 {
+          position: fixed;
+          width: 20vmin;
+          height: 20vmin;
+          border-radius: 50%;
+          background-color: hsla(150, 100%, 84%, 1);
+          background-image: var(--gradient);
+          background-size: 300% 300%;
+
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          --x: calc(-50% - 40vw);
+
+          z-index: 10001;
+          pointer-events: none;
+
+          opacity: 0;
+
+          animation: showCircle 2s ease-in forwards 1s,
+            gradientAnimation 2s linear infinite,
+            upDown 1s ease-in-out infinite 3.8s,
+            fadeOut 0.5s ease-out forwards 0.5s;
+        }
+
+        #circle2 {
+          position: fixed;
+          width: 20vmin;
+          height: 20vmin;
+          border-radius: 50%;
+          background-color: hsla(150, 100%, 84%, 1);
+          background-image: var(--gradient);
+          background-size: 300% 300%;
+
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          --x: calc(-50% - 20vw);
+
+          z-index: 10001;
+          pointer-events: none;
+
+          opacity: 0;
+
+          animation: showCircle 2s ease-in forwards 1s,
+            gradientAnimation 2s linear infinite,
+            upDown 1s ease-in-out infinite 3.6s,
+            fadeOut 0.5s ease-out forwards 0.5s;
+        }
+
+        #circle3 {
+          position: fixed;
+          width: 20vmin;
+          height: 20vmin;
+          border-radius: 50%;
+          background-color: hsla(150, 100%, 84%, 1);
+          background-image: var(--gradient);
+          background-size: 300% 300%;
+
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+
+          z-index: 10001;
+          pointer-events: none;
+
+          opacity: 0;
+
+          box-shadow: none;
+
+          --x: -50%;
+
+          animation: showCircle 2s ease-in forwards 1s,
+            gradientAnimation 2s linear infinite,
+            upDown 1s ease-in-out infinite 3.4s,
+            fadeOut 0.5s ease-out forwards 0.5s;
+        }
+
+        #circle4 {
+          position: fixed;
+          width: 20vmin;
+          height: 20vmin;
+          border-radius: 50%;
+          background-color: hsla(150, 100%, 84%, 1);
+          background-image: var(--gradient);
+          background-size: 300% 300%;
+
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          --x: calc(-50% + 20vw);
+
+          z-index: 10001;
+          pointer-events: none;
+
+          opacity: 0;
+
+          animation: showCircle 2s ease-in forwards 1s,
+            gradientAnimation 2s linear infinite,
+            upDown 1s ease-in-out infinite 3.2s,
+            fadeOut 0.5s ease-out forwards 0.5s;
+        }
+
+        #circle5 {
+          position: fixed;
+          width: 20vmin;
+          height: 20vmin;
+          border-radius: 50%;
+          background-color: hsla(150, 100%, 84%, 1);
+          background-image: var(--gradient);
+          background-size: 300% 300%;
+
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          --x: calc(-50% + 40vw);
+
+          z-index: 10001;
+          pointer-events: none;
+
+          opacity: 0;
+          animation: showCircle 2s ease-in forwards 1s,
+            gradientAnimation 2s linear infinite,
+            upDown 1s ease-in-out infinite 3s,
+            fadeOut 0.5s ease-out forwards 0.5s;
+        }
+
+        @keyframes fadeOut {
+          0% {
+            opacity: 1;
+          }
+
+          100% {
+            opacity: 0;
+          }
+        }
+
+        @keyframes upDown {
+          0% {
+            transform: translate(var(--x), calc(-50vh));
+          }
+
+          50% {
+            transform: translate(var(--x), calc(50vh - 20vw));
+          }
+
+          100% {
+            transform: translate(var(--x), calc(-50vh));
+          }
+        }
+
+        @keyframes showCircle {
+          0% {
+            opacity: 0;
+            transform: translate(-50%, -50%);
+          }
+
+          20% {
+            opacity: 1;
+            width: 20vmin;
+            height: 20vmin;
+            transform: translate(-50%, -50%);
+          }
+
+          65% {
+            opacity: 1;
+            width: 20vw;
+            height: 20vw;
+            transform: translate(-50%, -50%);
+          }
+
+          80% {
+            opacity: 1;
+            width: 20vw;
+            height: 20vw;
+            transform: translate(var(--x), -50%);
+          }
+
+          100% {
+            opacity: 1;
+            width: 20vw;
+            height: 20vw;
+            transform: translate(var(--x), -50vh);
+          }
+        }
+
+        @keyframes gradientAnimation {
+          0% {
+            background-position: 0% 50%;
+          }
+
+          40% {
+            background-position: 100% 50%;
+          }
+
+          60% {
+            background-position: 100% 0%;
+          }
+
+          80% {
+            background-position: 50% 0%;
+          }
+
+          100% {
+            background-position: 0% 50%;
+          }
+        }
       }
 
       @media screen and (min-width: 1420px) and (max-width: 1485px) {
@@ -321,26 +542,7 @@
           height: 20vmin;
           border-radius: 50%;
           background-color: hsla(150, 100%, 84%, 1);
-          background-image: radial-gradient(
-              at 74% 14%,
-              hsla(9, 100%, 63%, 1) 0px,
-              transparent 50%
-            ),
-            radial-gradient(
-              at 100% 62%,
-              hsla(32, 100%, 57%, 1) 0px,
-              transparent 50%
-            ),
-            radial-gradient(
-              at 29% 38%,
-              hsla(284, 100%, 74%, 1) 0px,
-              transparent 50%
-            ),
-            radial-gradient(
-              at 65% 70%,
-              hsla(232, 100%, 61%, 1) 0px,
-              transparent 50%
-            );
+          background-image: var(--gradient);
           background-size: 300% 300%;
 
           left: 50%;
@@ -374,26 +576,7 @@
           height: 20vmin;
           border-radius: 50%;
           background-color: hsla(150, 100%, 84%, 1);
-          background-image: radial-gradient(
-              at 74% 14%,
-              hsla(9, 100%, 63%, 1) 0px,
-              transparent 50%
-            ),
-            radial-gradient(
-              at 100% 62%,
-              hsla(32, 100%, 57%, 1) 0px,
-              transparent 50%
-            ),
-            radial-gradient(
-              at 29% 38%,
-              hsla(284, 100%, 74%, 1) 0px,
-              transparent 50%
-            ),
-            radial-gradient(
-              at 65% 70%,
-              hsla(232, 100%, 61%, 1) 0px,
-              transparent 50%
-            );
+          background-image: var(--gradient);
           background-size: 300% 300%;
 
           left: 50%;
@@ -427,26 +610,7 @@
           height: 20vmin;
           border-radius: 50%;
           background-color: hsla(150, 100%, 84%, 1);
-          background-image: radial-gradient(
-              at 74% 14%,
-              hsla(9, 100%, 63%, 1) 0px,
-              transparent 50%
-            ),
-            radial-gradient(
-              at 100% 62%,
-              hsla(32, 100%, 57%, 1) 0px,
-              transparent 50%
-            ),
-            radial-gradient(
-              at 29% 38%,
-              hsla(284, 100%, 74%, 1) 0px,
-              transparent 50%
-            ),
-            radial-gradient(
-              at 65% 70%,
-              hsla(232, 100%, 61%, 1) 0px,
-              transparent 50%
-            );
+          background-image: var(--gradient);
           background-size: 300% 300%;
 
           left: 50%;
@@ -483,26 +647,7 @@
           height: 20vmin;
           border-radius: 50%;
           background-color: hsla(150, 100%, 84%, 1);
-          background-image: radial-gradient(
-              at 74% 14%,
-              hsla(9, 100%, 63%, 1) 0px,
-              transparent 50%
-            ),
-            radial-gradient(
-              at 100% 62%,
-              hsla(32, 100%, 57%, 1) 0px,
-              transparent 50%
-            ),
-            radial-gradient(
-              at 29% 38%,
-              hsla(284, 100%, 74%, 1) 0px,
-              transparent 50%
-            ),
-            radial-gradient(
-              at 65% 70%,
-              hsla(232, 100%, 61%, 1) 0px,
-              transparent 50%
-            );
+          background-image: var(--gradient);
           background-size: 300% 300%;
 
           left: 50%;
@@ -536,26 +681,7 @@
           height: 20vmin;
           border-radius: 50%;
           background-color: hsla(150, 100%, 84%, 1);
-          background-image: radial-gradient(
-              at 74% 14%,
-              hsla(9, 100%, 63%, 1) 0px,
-              transparent 50%
-            ),
-            radial-gradient(
-              at 100% 62%,
-              hsla(32, 100%, 57%, 1) 0px,
-              transparent 50%
-            ),
-            radial-gradient(
-              at 29% 38%,
-              hsla(284, 100%, 74%, 1) 0px,
-              transparent 50%
-            ),
-            radial-gradient(
-              at 65% 70%,
-              hsla(232, 100%, 61%, 1) 0px,
-              transparent 50%
-            );
+          background-image: var(--gradient);
           background-size: 300% 300%;
 
           left: 50%;
@@ -708,7 +834,7 @@
             transform: translate(-50%, -50%);
           }
 
-          70% {
+          65% {
             opacity: 1;
             width: 20vw;
             height: 20vw;
@@ -2694,6 +2820,29 @@
           transform: translateX(-50%) translateY(-50%);
         }
       }
+
+      :root {
+        --gradient: radial-gradient(
+            at 74% 14%,
+            hsla(9, 100%, 63%, 1) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 100% 62%,
+            hsla(32, 100%, 57%, 1) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 29% 38%,
+            hsla(284, 100%, 74%, 1) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 65% 70%,
+            hsla(232, 100%, 61%, 1) 0px,
+            transparent 50%
+          );
+      }
     </style>
   </head>
 
@@ -2726,6 +2875,7 @@
     <div id="circle4"></div>
     <div id="circle5"></div>
     <!-- anna end -->
+    <div id="div21"></div>
     <!-- cathy start-->
     <div id="div23"></div>
     <div id="div25"></div>
